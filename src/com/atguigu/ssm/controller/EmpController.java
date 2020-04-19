@@ -13,10 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Controller
 public class EmpController {
@@ -58,6 +55,14 @@ public class EmpController {
     public String updateEmp(Emp emp) {
         empService.updateEmp(emp);
         return "redirect:/emps/1";
+    }
+
+    @RequestMapping(value="/emps", method=RequestMethod.DELETE)
+    public String deleteMore(String[] eid) {
+        //获取客户端name属性相同的多个元素的值，可以通过字符串字节或去，每个值中间以逗号分隔，也可以以数组直接获取
+        System.out.println(Arrays.toString(eid));
+
+        return "";
     }
 
 }

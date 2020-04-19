@@ -8,7 +8,7 @@
     <title>展示员工信息</title>
     <link rel="stylesheet" href="${pageContext.servletContext.contextPath }/css/index_work.css" />
     <script type="text/javascript" src="${pageContext.servletContext.contextPath }/js/jquery-1.8.2.min.js"></script>
-    <%--<script type="text/javascript">
+    <script type="text/javascript">
         $(function () {
             $("#selectAll").click(function () {
                 $("[name='eid']").prop("checked", $(this).prop("checked"));
@@ -19,7 +19,7 @@
                 return false;
             });
         });
-    </script>--%>
+    </script>
 </head>
 <body>
 <form method="post">
